@@ -3,6 +3,7 @@ package one.digitalinnovation.gof;
 import one.digitalinnovation.gof.Singleton.SingletonLazy;
 import one.digitalinnovation.gof.Strategy.*;
 import one.digitalinnovation.gof.Strategy.Comportamento;
+import one.digitalinnovation.gof.facade.Facade;
 
 public class test {
     public static void main(String[] args) {
@@ -24,16 +25,19 @@ public class test {
         Comportamento agressivo = new ComportamentoAgressivo();
 
         Robo robo = new Robo();
-        robo.setStrategia(normal);
-        robo.mover();
+        robo.setStrategia(normal);//a instancia da classe ComportamentoNormal() é passada como parâmetro
         robo.mover();
         robo.setStrategia(defensivo);
         robo.mover();
         robo.setStrategia(agressivo);
         robo.mover();
-        robo.mover();
+        robo.setStrategia(normal);
         robo.mover();
 
+        //testando a facade
+        //Modificada para singleton
+        Facade facade = Facade.getFacade();
+        facade.migrarCliente("Glamim","18077565");
 
     }
 }
