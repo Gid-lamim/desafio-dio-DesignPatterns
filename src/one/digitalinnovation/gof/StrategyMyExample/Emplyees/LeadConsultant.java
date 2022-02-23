@@ -1,14 +1,14 @@
 package one.digitalinnovation.gof.StrategyMyExample.Emplyees;
 
 
-public class Consultant implements Role{
+public class LeadConsultant implements Role{
 	
     public String description() {
-        return Consultant.class.getSimpleName();
+        return LeadConsultant.class.getSimpleName();
     }
     
     public String responsabilities(){
-    	return "write code";
+    	return "makes tech decisions";
     }
 
 }

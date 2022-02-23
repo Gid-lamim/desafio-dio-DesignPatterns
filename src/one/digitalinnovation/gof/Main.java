@@ -82,5 +82,6 @@ public class Main {
 		samManning.promote(new SeniorConsultant());
 		System.out.println("\n=====after the promotion=====");
 		System.out.println(samManning.grade());
+
 	}
 }
